@@ -12,5 +12,11 @@ export class DataService {
     const value = this.date.value.add(namber, 'month')
      this.date.next(value)
   }
-
+  chahgeDate(date:moment.Moment){
+    const value = this.date.value.set({
+      date: date.date(),
+      month: date.month()
+    })
+    this.date.next(value)
+  }
 }
